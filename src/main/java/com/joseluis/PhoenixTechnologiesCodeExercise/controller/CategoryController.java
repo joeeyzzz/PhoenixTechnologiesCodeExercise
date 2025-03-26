@@ -1,6 +1,7 @@
 package com.joseluis.PhoenixTechnologiesCodeExercise.controller;
 
 import com.joseluis.PhoenixTechnologiesCodeExercise.dto.CategoryDTO;
+import com.joseluis.PhoenixTechnologiesCodeExercise.dto.CategoryRequestDTO;
 import com.joseluis.PhoenixTechnologiesCodeExercise.service.CategoryService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -22,7 +23,7 @@ public class CategoryController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Create a new category")
-    public CategoryDTO createCategory(@Valid @RequestBody CategoryDTO request) {
+    public CategoryDTO createCategory(@Valid @RequestBody CategoryRequestDTO request) {
 
         return categoryService.createCategory(request);
     }

@@ -52,6 +52,11 @@ public class DTOMapper {
         modelMapper.map(dto, entity);
     }
 
+    public Category toCategoryEntity(CategoryRequestDTO dto) {
+
+        return modelMapper.map(dto, Category.class);
+    }
+
     public Category toCategoryEntity(CategoryDTO dto) {
 
         return modelMapper.map(dto, Category.class);

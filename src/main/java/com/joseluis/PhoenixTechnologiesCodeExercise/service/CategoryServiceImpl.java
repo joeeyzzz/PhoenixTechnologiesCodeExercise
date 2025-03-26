@@ -1,6 +1,7 @@
 package com.joseluis.PhoenixTechnologiesCodeExercise.service;
 
 import com.joseluis.PhoenixTechnologiesCodeExercise.dto.CategoryDTO;
+import com.joseluis.PhoenixTechnologiesCodeExercise.dto.CategoryRequestDTO;
 import com.joseluis.PhoenixTechnologiesCodeExercise.dto.DTOMapper;
 import com.joseluis.PhoenixTechnologiesCodeExercise.exception.EntityNotFoundException;
 import com.joseluis.PhoenixTechnologiesCodeExercise.model.Category;
@@ -22,7 +23,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     @Transactional
-    public CategoryDTO createCategory(CategoryDTO request) {
+    public CategoryDTO createCategory(CategoryRequestDTO request) {
 
         Category category = dtoMapper.toCategoryEntity(request);
         Category savedCategory = categoryRepository.save(category);
